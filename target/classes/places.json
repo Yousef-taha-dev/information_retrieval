@@ -1,0 +1,219 @@
+{
+  "trips": [
+
+      {
+        "id": 1,
+        "name": "Petra",
+        "location": "Ma'an",
+        "description": "Petra is one of Jordan's most famous sites, known for its rock-cut architecture such as the Treasury and its impressive red sandstone formations.",
+        "keywords": ["Nabatean city", "rock-cut architecture", "Treasury", "sandstone", "archaeology"]
+      },
+      {
+        "id": 2,
+        "name": "Wadi Rum",
+        "location": "Aqaba",
+        "description": "Wadi Rum is known for its desert landscapes, sandstone mountains, and Bedouin camps, offering various adventure activities.",
+        "keywords": ["desert", "sandstone mountains", "Bedouin", "jeep tour", "stargazing"]
+      },
+      {
+        "id": 3,
+        "name": "Jerash",
+        "location": "Jerash",
+        "description": "Jerash is famous for its Roman ruins, amphitheaters, and colonnaded streets, making it a major site for those interested in ancient history.",
+        "keywords": ["Roman ruins", "Oval Plaza", "colonnaded street", "amphitheater", "ancient city"]
+      },
+      {
+        "id": 4,
+        "name": "Dead Sea",
+        "location": "Amman",
+        "description": "The Dead Sea is known for its extremely salty water and mineral-rich mud, attracting visitors who want to experience floating and wellness treatments.",
+        "keywords": ["lowest point", "salty water", "floating", "mineral mud", "wellness"]
+      },
+      {
+        "id": 5,
+        "name": "Aqaba",
+        "location": "Aqaba",
+        "description": "Aqaba is located on the Red Sea and is known for its coral reefs, diving spots, water sports, and seaside resorts.",
+        "keywords": ["Red Sea", "coral reefs", "diving", "water sports", "resort"]
+      },
+      {
+        "id": 6,
+        "name": "Amman Citadel",
+        "location": "Amman",
+        "description": "Amman Citadel features Roman, Byzantine, and Islamic ruins, including the Temple of Hercules and the Umayyad Palace.",
+        "keywords": ["Amman", "Temple of Hercules", "Umayyad Palace", "ancient ruins", "Byzantine"]
+      },
+      {
+        "id": 7,
+        "name": "Roman Theater",
+        "location": "Amman",
+        "description": "The Roman Theater in Amman is an ancient amphitheater that remains a cultural venue for various events.",
+        "keywords": ["Roman theater", "amphitheater", "ancient", "culture", "performance"]
+      },
+      {
+        "id": 8,
+        "name": "Mount Nebo",
+        "location": "Madaba",
+        "description": "Mount Nebo offers panoramic views of the Dead Sea and the Holy Land and is traditionally linked to the story of Prophet Moses.",
+        "keywords": ["Mount Nebo", "Moses", "holy site", "viewpoint", "biblical"]
+      },
+      {
+        "id": 9,
+        "name": "Madaba Map Church",
+        "location": "Madaba",
+        "description": "The Church of Saint George in Madaba is known for its Byzantine mosaic map of the Holy Land.",
+        "keywords": ["Madaba", "mosaic map", "Byzantine", "Saint George", "historic church"]
+      },
+      {
+        "id": 10,
+        "name": "Ajloun Castle",
+        "location": "Ajloun",
+        "description": "Ajloun Castle is a 12th-century fortress built to protect the region and features Islamic military architecture.",
+        "keywords": ["Ajloun", "castle", "fortress", "Salah al-Din", "Crusaders"]
+      },
+      {
+        "id": 11,
+        "name": "Dana Biosphere Reserve",
+        "location": "Tafilah",
+        "description": "Dana Biosphere Reserve is known for its diverse wildlife, mountains, and hiking trails, making it ideal for eco-tourism.",
+        "keywords": ["nature reserve", "hiking", "wildlife", "mountains", "eco tourism"]
+      },
+      {
+        "id": 12,
+        "name": "Umm Qais",
+        "location": "Irbid",
+        "description": "Umm Qais features Greco-Roman ruins overlooking the Sea of Galilee, including basalt theaters and ancient streets.",
+        "keywords": ["Umm Qais", "Roman ruins", "Sea of Galilee", "colonnaded street", "archaeology"]
+      },
+      {
+        "id": 13,
+        "name": "Karak Castle",
+        "location": "Karak",
+        "description": "Karak Castle is a large Crusader fortress known for its tunnels, strong defensive design, and hilltop location.",
+        "keywords": ["Karak", "Crusader fortress", "castle", "towers", "underground"]
+      },
+      {
+        "id": 14,
+        "name": "Wadi Mujib",
+        "location": "Dead Sea",
+        "description": "Wadi Mujib is a canyon known for its river hikes, waterfalls, and adventure trails within the biosphere reserve.",
+        "keywords": ["canyon", "river hike", "waterfalls", "biosphere reserve", "adventure"]
+      },
+      {
+        "id": 15,
+        "name": "Mujib Dam",
+        "location": "Karak",
+        "description": "Mujib Dam provides essential water storage and offers scenic views of surrounding mountains and farmland.",
+        "keywords": ["dam", "water storage", "scenic", "agriculture", "Mujib"]
+      },
+
+    {
+      "id": 16,
+      "name": "Salt Museum",
+      "location": "Salt",
+      "description": "Salt Museum Salt Salt  Salt Salt Salt  is a Jordan historic site and popular Jordan tourist attraction. Showcasing the history, culture, and traditional architecture,agricultural culture it is an essential Jordan travel destination for Jordan tourism.",
+      "keywords": ["Salt", "heritage", "museum", "traditional architecture", "culture"]
+    },
+    {
+      "id": 17,
+      "name": "As-Salt Old Town",
+      "location": "Salt",
+      "description": "The old city of Salt is considered a heritage site and tourist attraction in Jordan.,. Known for yellow stone buildings, historic markets, With its traditional houses, it is a major tourist destination in Jordan.",
+      "keywords": ["Salt old town", "UNESCO", "heritage", "traditional buildings", "market"]
+    },
+    {
+      "id": 18,
+      "name": "Desert Castles",
+
+      "location": "Eastern Desert",
+      "description": "Jordan’s Desert Castles, including Qasr Amra and Qasr al-Kharana, are Jordan historic sites and Jordan tourist attractions. They showcase Islamic art, frescoes, and are essential Jordan travel destinations in Jordan tourism.",
+      "keywords": ["desert castles", "Qasr Amra", "frescoes", "Islamic art", "history"]
+    },
+    {
+      "id": 19,
+      "name": "Qasr Amra",
+      "location": "Zarqa",
+      "description": "Qasr Amra is a UNESCO Jordan heritage site and a major Jordan tourist attraction. Famous for its frescoes and desert castle architecture, it is a prime Jordan travel .",
+      "keywords": ["Qasr Amra", "UNESCO", "frescoes", "desert castle", "Islamic"]
+    },
+    {
+      "id": 20,
+      "name": "Shaumari Wildlife Reserve",
+      "location": "Zarqa",
+      "description": "Shaumari Wildlife Reserve is a Jordan travel destination and Jordan tourist attraction home to Arabian oryx, gazelles, and conservation projects, highlighting Jordan tourism.",
+      "keywords": ["wildlife", "oryx", "gazelles", "conservation", "nature reserve"]
+    },
+    {
+      "id": 21,
+      "name": "Azraq Wetland Reserve",
+      "location": "Azraq",
+      "description": "Azraq Wetland Reserve is a Jordan tourist attraction and Jordan travel destination oasis, with bird migration, wetlands, and natural springs contributing to Jordan tourism.",
+      "keywords": ["wetland", "bird migration", "oasis", "springs", "nature"]
+    },
+    {
+      "id": 22,
+      "name": "King Abdullah Mosque",
+      "location": "Amman",
+      "description": "King Abdullah Mosque is a Jordan historic site and Jordan tourist attraction.Construction of the mosque began on June 5, 1982, the first phase was completed in 1986, and the second (final) phase was completed in 1989. Known for its blue dome and Islamic architecture, it is a Jordan travel destination in Jordan tourism.",
+      "keywords": ["mosque", "blue dome", "Islamic architecture", "Amman"]
+    },
+    {
+      "id": 23,
+      "name": "Rainbow Street",
+      "location": "Amman",
+      "description": "Rainbow Street is a Jordan travel destination and popular . Featuring cafes, shops, and cultural sites, it is a vibrant Jordan tourism experience.",
+      "keywords": ["Rainbow Street", "cafes", "shops", "culture", "Amman"]
+    },
+    {
+      "id": 24,
+      "name": "Boulevard Abdali",
+      "location": "Amman",
+      "description": "Boulevard Abdali is a modern Jordan travel destination and Jordan tourist attraction. Known for restaurants, shopping, and events, it enhances Jordan tourism in Amman.",
+      "keywords": ["Abdali", "boulevard", "shopping", "restaurants", "modern"]
+    },
+    {
+      "id": 25,
+      "name": "King Hussein Park",
+      "location": "Amman",
+      "description": "King Hussein Park is a Jordan travel destination and Jordan tourist attraction with green areas, museums, and family attractions, contributing to Jordan tourism.",
+      "keywords": ["park", "Amman", "museum", "culture", "family"]
+    },
+    {
+      "id": 26,
+      "name": "Jordan Museum",
+      "location": "Amman",
+      "description": "The Jordan Museum is a Jordan historic site and Jordan tourist attraction housing artifacts from prehistoric to Islamic eras. It is a must-see Jordan travel destination for Jordan tourism.",
+      "keywords": ["museum", "history", "Dead Sea Scrolls", "artifacts", "culture"]
+    },
+    {
+      "id": 27,
+      "name": "Salt Archaeological Museum",
+      "location": "Salt",
+      "description": "Salt Archaeological Museum is a Jordan historic site and Jordan tourist attraction. It showcases artifacts, old maps, and history, making it a key Jordan travel .",
+      "keywords": ["Salt", "archaeology", "museum", "maps", "heritage"]
+    },
+    {
+      "id": 28,
+      "name": "Umayyad Palace",
+      "location": "Amman",
+      "description": "Umayyad Palace is a Jordan historic site and Jordan tourist attraction with domes, courtyards, and Islamic architecture, making it a notable Jordan travel .",
+      "keywords": ["Umayyad Palace", "Islamic", "architecture", "Amman", "archaeology"]
+    },
+    {
+      "id": 29,
+      "name": "Shobak Castle",
+      "location": "Shobak",
+      "description": "Shobak Castle is a Jordan historic site and Jordan tourist attraction built by Crusaders in the 12th century. It is a prime Jordan travel destination offering panoramic views and underground tunnels, .",
+      "keywords": ["Shobak", "castle", "Crusader", "tunnels", "panorama"]
+    },
+    {
+      "id": 30,
+      "name": "Al-Maghtas (Baptism Site)",
+      "location": "Jordan River",
+      "description": "Al-Maghtas is a UNESCO Jordan heritage site and Jordan tourist attraction believed to be where Jesus was baptized. It is an important Jordan travel destination for religious Jordan tourism.",
+      "keywords": ["baptism site", "UNESCO", "Jordan River", "holy place", "Christianity"]
+    }
+  ]
+
+}
+
