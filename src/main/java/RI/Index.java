@@ -1,7 +1,6 @@
 package RI;
-//تحويل JSON من ملف أو String إلى كائن Java (fromJson)
-import com.google.gson.Gson;
 
+import com.google.gson.Gson;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.IndexWriter;
@@ -38,24 +37,26 @@ public class Index {
 
     public void createIndex() {
         try {
-            // -------------------- Load JSON from resources --------------------
+            // 🔹 تحميل ملف JSON
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream("places.json");
             if (inputStream == null) {
-                throw new RuntimeException("File corps.json not found in resources!");
+                throw new RuntimeException("places.json not found in resources!");
             }
-            InputStreamReader reader = new InputStreamReader(inputStream);
 
-            // Parse JSON using Wrapper
+            InputStreamReader reader = new InputStreamReader(inputStream);
             TripsWrapper wrapper = new Gson().fromJson(reader, TripsWrapper.class);
             List<Place> places = wrapper.trips;
 
-            // -------------------- Lucene Index setup --------------------
+            // 🔹 إعداد Lucene
             FSDirectory dir = FSDirectory.open(Paths.get("index"));
             StandardAnalyzer analyzer = new StandardAnalyzer();
+
             IndexWriterConfig config = new IndexWriterConfig(analyzer);
+            config.setOpenMode(IndexWriterConfig.OpenMode.CREATE); // 🔥 الحل
+
             IndexWriter writer = new IndexWriter(dir, config);
 
-            // -------------------- Add documents to index --------------------
+            // 🔹 إضافة المستندات
             for (Place p : places) {
                 Document doc = new Document();
 
@@ -65,15 +66,18 @@ public class Index {
                 doc.add(new TextField("description", p.description, Field.Store.YES));
 
                 if (p.keywords != null && !p.keywords.isEmpty()) {
-                    String keywordText = String.join(" ", p.keywords);
-                    doc.add(new TextField("keywords", keywordText, Field.Store.YES));
+                    doc.add(new TextField(
+                            "keywords",
+                            String.join(" ", p.keywords),
+                            Field.Store.YES
+                    ));
                 }
 
                 writer.addDocument(doc);
             }
 
             writer.close();
-            System.out.println("✔ Index Created Successfully!");
+            System.out.println("✔ Index Created Successfully (No Duplicates)");
 
         } catch (Exception e) {
             e.printStackTrace();
