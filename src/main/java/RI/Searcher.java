@@ -5,13 +5,10 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.search.similarities.ClassicSimilarity;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -33,29 +30,32 @@ public class Searcher {
         IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(indexPath)));
         IndexSearcher searcher = new IndexSearcher(reader);
 
-        // ---------------- TF-IDF Manual ----------------
-        int totalDocs = reader.numDocs();
-        int docFreq = reader.docFreq(new Term("description", keyword.toLowerCase()));
-        double idf = Math.log((double)(totalDocs + 1) / (docFreq + 1)) + 1.0;
+        // 🔹 استخدام Cosine Similarity (TF-IDF)
+        searcher.setSimilarity(new ClassicSimilarity());
 
-        // ---------------- Lucene Query ----------------
-        QueryParser parser = new QueryParser("description", analyzer);
-        Query query = parser.parse(keyword);
+        // 🔹 البحث في description
+        QueryParser parserDesc = new QueryParser("description", analyzer);
+        Query queryDesc = parserDesc.parse(keyword);
+
+        // 🔹 البحث في keywords
+        QueryParser parserKeywords = new QueryParser("keywords", analyzer);
+        Query queryKeywords = parserKeywords.parse(keyword);
+
+        // 🔹 دمج الاستعلامين
+        BooleanQuery query = new BooleanQuery.Builder()
+                .add(queryDesc, BooleanClause.Occur.SHOULD)
+                .add(queryKeywords, BooleanClause.Occur.SHOULD)
+                .build();
 
         TopDocs topDocs = searcher.search(query, maxResults);
 
         for (ScoreDoc sd : topDocs.scoreDocs) {
             Document doc = searcher.doc(sd.doc);
-
-            // حساب TF داخل المستند
-            String desc = doc.get("description").toLowerCase();
-            int tf = 0;
-            for (String word : desc.split("\\W+")) {
-                if (word.equals(keyword.toLowerCase())) tf++;
-            }
-
-            double tfidfScore = tf * idf;
-            results.add(new SearchResult(doc.get("name"), doc.get("location"), tfidfScore));
+            results.add(new SearchResult(
+                    doc.get("name"),
+                    doc.get("location"),
+                    sd.score
+            ));
         }
 
         reader.close();
