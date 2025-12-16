@@ -5,34 +5,25 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        try {
-            Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
 
-            System.out.println("Enter keyword to search:");
-            String keyword = scanner.nextLine().trim();
+        // 🔁 إعادة بناء الفهرس
+        Index index = new Index();
+        index.createIndex();
 
-            // مسار الإندكس المخزن على القرص
-            String indexPath = "index";
+        // 🔍 البحث
+        Searcher searcher = new Searcher("index");
 
-            Searcher searcher = new Searcher(indexPath);
+        Scanner sc = new Scanner(System.in);
 
-            // البحث وأخذ أعلى 10 نتائج
-            List<SearchResult> results = searcher.search(keyword, 10);
+        System.out.print("Enter search keyword: ");
+        String keyword = sc.nextLine();
 
-            if (results.isEmpty()) {
-                System.out.println("No results found for: " + keyword);
-            } else {
-                System.out.println("Search results for '" + keyword + "':");
-                for (SearchResult res : results) {
-                    System.out.println(res);
-                }
-            }
+        List<SearchResult> results = searcher.search(keyword, 10);
 
-            scanner.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        System.out.println("\n--- Search Results ---");
+        for (SearchResult r : results) {
+            System.out.println(r);
         }
     }
 }
-
