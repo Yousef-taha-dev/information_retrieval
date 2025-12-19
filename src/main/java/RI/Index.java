@@ -1,7 +1,8 @@
 package RI;
 
 import com.google.gson.Gson;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
@@ -49,8 +50,7 @@ public class Index {
 
             // 🔹 إعداد Lucene
             FSDirectory dir = FSDirectory.open(Paths.get("index"));
-            StandardAnalyzer analyzer = new StandardAnalyzer();
-
+            Analyzer analyzer = new EnglishAnalyzer();
             IndexWriterConfig config = new IndexWriterConfig(analyzer);
             config.setOpenMode(IndexWriterConfig.OpenMode.CREATE); // 🔥 الحل
 
@@ -77,7 +77,7 @@ public class Index {
             }
 
             writer.close();
-            System.out.println("✔ Index Created Successfully (No Duplicates)");
+
 
         } catch (Exception e) {
             e.printStackTrace();
